@@ -1,0 +1,101 @@
+
+body{
+    padding-top: 0px;
+    min-height: 100%;
+    margin: 0;
+    overflow-y: hidden;
+}
+.mainArea{
+    justify-self: center;
+    margin: 20px;
+    width: 80vw;
+    height: 100vh;
+    border:1px solid black;
+}
+.mainArea.index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/FantasyArt.jpg");
+    background-size: cover;
+}
+.mainArea.pageNotFound{
+    background-image: url("../images/AI_Fantasy404.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:600px;
+    height: 600px;
+}
+.importantButton{
+    border: 2px solid black;
+    background-color: #f72020;
+    width: 230px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.importantButton:hover{
+    background-color: #f93030;
+}
+.importantButton:active{
+    background-color: #fC0000;
+}
+.pageBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 140vh;
+    object-fit: cover;
+    z-index: -10;
+}
+.pageBackground.pageNotFound{
+    width: 100%;
+    height: 728px;
+}
+.mainArea.serverError{
+    background-image: url("../images/AI_Fantasy500.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:600px;
+    height: 600px;
+}
+
+.logo{
+    transition: all 1s;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    justify-self: baseline;
+}
+.logo:hover{
+    transition: all 0.5s;
+    transform: scale(1.05);
+    position: relative;
+    z-index: 2;
+    filter: brightness(110%);
+}
+#welcomeTitle{
+    font-size: 6em;
+}
+.mainArea p{
+    background: white;
+    border-radius: 20%;
+    padding: 4px;
+}
+.grow-shrink {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

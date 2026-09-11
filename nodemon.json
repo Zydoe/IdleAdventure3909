@@ -1,0 +1,3 @@
+{
+    "ignore":["private/games/*","private/users/*","private/uploads/*"]
+}

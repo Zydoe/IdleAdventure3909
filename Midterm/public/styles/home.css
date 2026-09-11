@@ -1,0 +1,27 @@
+body{
+    overflow-y: hidden;
+}
+.titleFlex{
+    margin-bottom: 75px;
+}
+.importantButton{
+    border: 2px solid black;
+    background-color: #f72020;
+    width: 200px;
+    height: 75px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.buttonWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+#PlayNowBTN{
+    font-size: 30;
+    font-weight: bolder;
+    width: 250px;
+    margin-bottom: 20px;
+}

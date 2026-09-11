@@ -1,0 +1,24 @@
+{
+    "weapons":[
+        {
+        "itemKey":"RUSTED_IRON_SWORD",
+        "itemName":"Rusted Iron Sword",
+        "itemDescription":"A short, rusty Iron Sword flaking bits of rust",
+        "type":"weapon",
+        "weaponStats":{
+            "damage":1,
+            "damageType":"blunt"
+            }
+        },
+        {
+            "itemKey":"IRON_SWORD",
+            "itemName": "Iron Sword",
+            "itemDescription":"A short, shiny Iron Sword. It reflects the world around it in its shining blade",
+            "type":"weapon",
+            "weaponStats":{
+                "damage":3,
+                "damageType":"slashing"
+            }
+        }
+    ]
+}

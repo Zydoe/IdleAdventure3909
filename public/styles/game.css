@@ -1,0 +1,387 @@
+body{
+    padding:0px;
+    margin: 0;
+    overflow: hidden;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+.pageBackground{
+    height: 729px;
+}
+.gamePage{
+    display: flex;
+    justify-content: space-between;
+    /* gap:10px; */
+}
+.screenSection{
+    width: 25%;
+}
+.screenSection.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap:10px; */
+}
+.screenSection.center{
+    width:50%;
+}
+.screenSection.right{
+    background-color: grey;
+    margin-left: 5px;
+}
+.gameNavigationBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(155deg, rgba(117, 26, 26, 1) 0%, rgba(217, 68, 52, 1) 59%, rgba(255, 239, 92, 1) 100%);
+    width: 100%;
+    height: 15vh;
+    gap:10px;
+}
+.titleLogo{
+    display: flex;
+    gap:10px;
+}
+.titleLogo .title{
+    color: white;
+    font-size: 2em;
+    stroke-width: 20px;
+    stroke: black;
+}
+/*Hamburger menu*/
+.icon{
+    width:30px;
+    background-color: #AAAAAA;
+    margin:5px;
+}
+.icon:hover{
+    filter: brightness(110%);
+}
+.hamburgerList{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin:0px;
+    background-color: #101010;
+    color: #AAAAAA;
+    font-size: 20px;
+    position: relative;
+    list-style: none;
+    list-style-position: inside;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid rgb(122, 122, 122);
+}
+.hamburgerList.active{
+    max-height: 300px; /* Adjust this value based on the number of menu items */
+}
+
+.hamburgerList li{
+    width: 100%;
+}
+.hamburgerList li:hover{
+    color: #FFFFFF;
+    background-color: #505050;
+    cursor: pointer;
+}
+
+/*Game area*/
+.textSpace{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(255, 188, 100, 0.4); */
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    gap: 10px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); /* for Safari */
+    border:5px solid black;
+    border-top: 2px solid black;
+}
+.textSpace::-webkit-scrollbar {
+  display: none;
+}
+#gameInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    resize: none;
+    font-size: 15px;
+    height: 20px;
+    width:  90%;
+    justify-self: center;
+    align-self: center;
+    background-color: #e4912b;
+    color: #101010;
+}
+
+
+/*Game buttons menu*/
+.gameTabs{
+    width: 100%;
+    height: 85vh;
+}
+.tabButtons{
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    gap:0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.characterInfo{
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.characterInfo span{
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    color: white;
+}
+.tabContent{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #707070;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* .tabContent::-webkit-scrollbar {
+  display: none;
+} */
+
+#characterTab.active{
+    display: block;
+}
+.characterInfoArea{
+    display: flex;
+}
+.tabContent .contentArea{
+    display: none;
+    width: 100%;
+    height:100%;
+}
+.tabContent .contentArea.active{
+    display: block;
+}
+#equipmentInfo{
+    flex:1;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:50px;
+}
+#armourInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:5px;
+}
+#itemsInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:5px;
+}
+#statsInfo{
+    flex:2;
+}
+.equipmentPlaceholder{
+    width: 64px;
+    height:64px;
+    border: 1px solid black;
+}
+.tabHeader{
+    justify-self: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+.gameButton{
+    margin: 0;
+    flex:1;
+    height: 30px;
+    border: 1px solid black;
+    background-color:#AAAAAA;
+}
+.gameButton.active{
+    background-color: #707070;
+    border-bottom: 0px;
+    font-weight: bold;
+}
+.gameButton:hover{
+    filter:brightness(110%);
+}
+.gameButton.active:hover{
+    background-color: #707070;
+    filter:brightness(100%);
+}
+
+/*Items context menu*/
+.contextMenu.active{
+    display: block;
+    position: absolute;
+    color: white;
+    z-index: 10;
+    width: 100px;
+}
+.contextMenu{
+    display: none;
+}
+#itemContextMenuList{
+    list-style-type: none;
+    padding: 0px;
+    margin:  0px;
+}
+#itemContextMenuList li{
+    margin: 0px;
+    border: 1px solid white;
+    width: 100%;
+    font-size: 18px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: black;
+}
+#itemContextMenuList li:hover{
+    background-color: #202020;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/*Items Tab*/
+.currencyArea{
+    display: flex;
+    align-items: center;
+}
+#currencyImage{
+    width: 25px;
+    height: 25px;
+    margin-left:20px;
+}
+#currencyText{
+    margin: 2px;
+    margin-left:10px;
+    font-family: "Papyrus", "Times New Roman";
+    font-weight:bolder;
+    font-size: 25px;
+}
+.inventoryArea{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    width: 90%;
+    gap: 1rem;
+    padding: 5px;
+    justify-self: center;
+}
+.inventorySlot {
+    aspect-ratio: 1 / 1; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 5%;
+}
+
+.equipmentSlot{
+    width: 64px;
+    height:64px;
+}
+.inventoryItem{
+    aspect-ratio: 1 / 1; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+#itemInfo{
+    display: none;
+     width: 200px;
+    height: auto;
+    background-color: #101010;
+    border: 2px solid white;
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+#itemInfo.active{
+    display: block;
+}
+
+
+
+/*
+Right Side
+*/
+#possibleActions{
+    margin-top: 80px;
+    justify-self: center;
+    width: 80%;
+    border: 1px solid black;
+}
+.actionsHeader{ /*The header saying "Actions*/
+    justify-self: center;
+    text-decoration: underline;
+}
+.actionHeader{ /*The sub header for an action category*/
+    margin: 10px;
+}
+.actionText{
+    margin: 0;
+    text-indent: 10px;
+}
+.actionText:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.actionInfo{
+    justify-self: center;
+    font-style:italic;
+}
+
+.disconnectedPopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* for Safari */
+}
+.disconnectedPopup.active{
+    display: block;
+}
+.disconnectedPopup .popupContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #101010;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 500px;
+}
+.disconnectedPopup h2{
+    color: white;
+    font-size: 1.5em;
+}

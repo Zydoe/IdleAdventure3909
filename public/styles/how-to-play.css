@@ -1,0 +1,32 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.content{
+    padding: 30px;
+    padding-top: 0px;
+}
+.pageTitle{
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.informationSection{
+    display:flex;
+    gap:20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.informationHeader{
+    font-size: 2em;
+    text-decoration: underline;
+}
+.informationText{
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.informationImage{
+    height: auto;
+    border: 3px groove rgb(218, 161, 76);
+    max-width: 50%;
+}

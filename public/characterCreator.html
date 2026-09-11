@@ -1,0 +1,79 @@
+<head lang="en">
+    <title>Character Creator</title>
+    <link rel="stylesheet" href="/styles/characterCreator.css"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/characterCreator.js"></script>
+</head>
+<body>
+    <img class="pageBackground" src="/images/old-wood.jpg">
+    <h1 class="titleText">Idle Adventure</h1>
+    <form class="mainArea" id="characterForm">
+        <div class="contentSeperator" id="leftDiv">
+            <div class = "formInput">
+                <label for="characterName">Name:</label>
+                <input type="text" name="characterName" id="characterName">
+            </div>
+            <div class = "formInput">
+                <label for="sex">Sex:</label>
+                <input type="radio" name="sex" value="Male" id="maleRdo" checked>
+                <label for="maleRdo">Male</label>
+                
+                <input type="radio" name="sex" value="Female" id="femaleRdo">
+                <label for="femaleRdo">Female</label>
+            </div>
+            
+            <div class="formInput">
+                <fieldset class="statsFieldset">
+                    <legend>Stats</legend>
+                    <div class="statsForm">
+                        <div id="statLabels">
+                            <label>Strength</label>
+                            <label>Dexterity</label>
+                            <label>Faith</label>
+                            <label>Luck</label>
+                        </div>
+                        <div class="statInputs">
+                            <div class="statInput">
+                                <div class="arrow up" id="strengthUpArrow"></div>
+                                <span class="statNumber" id="strengthInput">#</span>
+                                <div class="arrow down" id="strengthDownArrow"></div>
+                            </div>
+                            <div class="statInput">
+                                <div class="arrow up" id="dexterityUpArrow"></div>
+                                <span class="statNumber" id="dexterityInput">#</span>
+                                <div class="arrow down" id="dexterityDownArrow"></div>
+                            </div>
+                            <div class="statInput">
+                                <div class="arrow up" id="faithUpArrow"></div>
+                                <span class="statNumber" id="faithInput">#</span>
+                                <div class="arrow down" id="faithhDownArrow"></div>
+                            </div>
+                            <div class="statInput">
+                                <div class="arrow up" id="luckUpArrow"></div>
+                                <span class="statNumber" id="luckInput">#</span>
+                                <div class="arrow down" id="luckDownArrow"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <p id="pointsAvailableLabel">Points Available: <span id="pointsAvailable">#</span></p>
+                </fieldset>
+            </div>
+        </div>
+        <div class="contentSeperator" id="centreDiv">
+            <p id="errorText"></p>
+            <div class = "formInput">
+                <label for="classInput">Class:</label>
+                <select type="text" name="classInput" id="classInput">
+                    <option value="Warrior">Warrior</option>
+                    <option value="Monk">Monk</option>
+                    <option value="Priest">Priest</option>
+                </select>
+            </div>
+        </div>
+        <div class="contentSeperator" id="rightDiv">
+            <input type="submit" value="Create Character" id="createCharacterBTN">
+        </div>
+    </form>
+</body> 

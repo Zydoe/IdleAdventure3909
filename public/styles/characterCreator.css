@@ -1,0 +1,110 @@
+.pageBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -10;
+    margin: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.titleText{
+    margin-top: 40px;
+    text-decoration: underline;
+    align-self: center;
+    justify-self: center;
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.mainArea{
+    width: 100%;
+    height: 80vh;
+    border: 1px solid black;
+    display: flex;
+    background-image: url('/images/old-wrinkled-paper.jpg');
+
+}
+.contentSeperator{
+    flex: 1;
+    padding: 20px;
+    
+}
+#centreDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#rightDiv{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+label{
+    font-weight:bold;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 2px;
+}
+.formInput{
+    margin-top: 30px;
+}
+.statsForm{
+    display: flex;
+}
+.statsFieldset{
+    font-weight: bolder;
+    width: fit-content;
+    justify-self: center;
+    border: 2px solid black;
+    background-color: #a56A0f95;
+}
+
+#statLabels{
+    display: flex;
+    flex-direction: column;
+}
+.statInput{
+    display: flex;
+    align-items: center;
+}
+.arrow{
+    width:20px;
+    height: 20px;
+    margin: 10px;
+}
+.arrow:hover{
+    filter: brightness(120%);
+}
+.arrow:active{
+    filter: brightness(70%);
+    transform: scale(1.1);
+}
+.arrow.up{
+    background-image: url("/game/icons/buttons/Arrow_Up.png");
+}
+.arrow.down{
+    background-image: url("/game/icons/buttons/Arrow_Down.png");
+}
+#pointsAvailableLabel{
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#createCharacterBTN{
+    height: 60px;
+    width: 150px;
+    background-color: #AE0000;
+    font-size: 17px;
+    font-weight: bold;
+}
+#errorText{
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: black;
+    height: 30px;
+}

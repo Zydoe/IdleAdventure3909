@@ -1,0 +1,26 @@
+.infoArea{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#editPictureBTN{
+    display: none;
+    align-self: center;
+    margin-bottom: 25px;
+}
+.profilePicture{
+    margin-bottom: 10px;
+    width: 200px;
+    border-radius: 50%;
+}
+#editPictureLabel{
+    background-color: #BBBBBB;
+    padding: 5px;
+    box-shadow: 10px 5px 5px grey;
+    margin-bottom: 20px;
+}
+#editPictureLabel:hover{
+    background-color: #DDDDDD;
+    padding: 5px;
+    box-shadow: 12px 7px 7px grey;
+}

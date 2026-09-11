@@ -1,0 +1,47 @@
+<!--    @Developer: Ben Judson
+        @Date: 2025-09-25
+        @Document: index.html: A homepage for idle adventure
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Idle adventure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scales to fit screen size-->
+		<link rel="stylesheet" href="/styles/index.css"/>
+        <link rel="stylesheet" href="/styles/formStyles.css"/>
+        <link rel="stylesheet" href="/styles/navigationBar.css"/>
+        <link rel="stylesheet" href="/styles/home.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <script src="/scripts/navigationBar.js"></script>
+        <script src="/scripts/home.js"></script>
+        
+	</head>
+    <body>
+        <img class = "pageBackground" src="/images/old-wrinkled-paper.jpg">
+        <div id="TitleHeader" class="header">
+            <div class="titleFlex logoWrapper">
+                <a class="logoLink" href="/home"><img class="logo" id="gameLogo" src="./images/gameLogo.png"></img> <h1>Idle Adventure</h1></a>
+            </div>
+           <div class="navLink"><a href="/how-to-play">How to play</a></div>
+           <div class="navLink"><a href="/about">About</a></div>
+           <div class="navLink"><a href="/account">My Account</a></div>
+        </div>
+        <div class="buttonWrapper">
+            <button class="importantButton" id="PlayNowBTN">
+                Play Now
+            </button>
+            <button class="importantButton" id="MyAccountBTN">
+                My Account
+            </button>
+            <button class="importantButton" id="HowToPlayBTN">
+                How To Play
+            </button>
+            <button class="importantButton" id="AboutBTN">
+                About
+            </button>
+        </div>  
+
+    </body>
+</html>

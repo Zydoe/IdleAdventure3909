@@ -1,0 +1,31 @@
+/*Game text classes*/
+.gameText{
+    margin: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.gameText.warning{
+    color:red;
+}
+.connection{
+    color:#0060AA;
+}
+.enemy.battleText{
+    color:#AF1010
+}
+/* .player.battleText{
+    
+} */
+.player{
+    color: #5260CC;
+}
+.titleMessage{
+    font-size: 30px;
+}
+.userText{
+    font-style: italic;
+}
+
+#healthSpan{
+    display: inline-block;
+}

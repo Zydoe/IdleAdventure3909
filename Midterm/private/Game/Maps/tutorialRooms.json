@@ -1,0 +1,133 @@
+[
+    {
+        "roomKey": "ROOM_TEMPLATE",
+        "roomName": "Template",
+        "roomDescription": "",
+        "connections": {
+            "North": {
+                "roomKey":null,
+                "entranceDescription":null
+            },
+            "East": null,
+            "South": null,
+            "West": null
+        },
+        "npcs": [
+
+        ],
+        "enemies": [
+            {
+                "enemyName": null,
+                "enemyKey": "GOBLIN",
+                "enemyLevel": 1,
+                "extraDescription": null
+            }
+        ],
+        "items": [
+            {
+                "itemKey": "RUSTED_IRON_SWORD",
+                "itemDescription": "On the table is an aged iron sword, flaking away with rust and dirt"
+            }
+        ],
+        "players": [
+
+        ]
+    },
+    {
+        "roomKey": "TEST_ROOM",
+        "roomName": "Main room",
+        "roomDescription": "A dank stone room. It is cold, and wet. The faint sound of dripping water can be heard every few seconds, echoing off the stone walls. The room is square, about 5 meters from wall to wall. Along the wall is a wooden table.",
+        "connections": {
+            "North": {
+                "roomKey":"TEST_ROOM_2",
+                "entranceDescription": "A dark hallway leading down into another room."
+            },
+            "East": null,
+            "South": null,
+            "West": null
+        },
+        "npcs": [
+
+        ],
+        "enemies": [
+            {
+                "enemyName": "Dungeon Goblin",
+                "enemyKey": "GOBLIN",
+                "enemyLevel": 1,
+                "extraDescription":"In the far corner, huddled up in a small green creature. It clutches a small knife."
+            }
+        ],
+        "items": [
+            {
+                "itemKey": "RUSTED_IRON_SWORD",
+                "itemDescription": "On the table is an aged iron sword, flaking away with rust and dirt."
+            }
+            
+        ],
+        "players": [
+            
+        ]
+    },
+    {
+        "roomKey": "TEST_ROOM_2",
+        "roomName": "Dungeon",
+        "roomDescription": "A dark dungeon",
+        "connections": {
+            "North":null,
+            "East": {
+                "roomKey":"DUNGEON_CLOSET",
+                "entranceDescription":"A small wooden door, creaking slightly"
+            },
+            "South": {
+                "roomKey":"TEST_ROOM",
+                "entranceDescription":"A dark hallway leading upwards"
+            },
+            "West": null
+        },
+        "npcs": [
+
+        ],
+        "enemies": [
+            
+        ],
+        "items": [
+            
+        ],
+        "players": [
+
+        ]
+    },
+    {
+        "roomKey": "DUNGEON_CLOSET",
+        "roomName": "Closet",
+        "roomDescription": "A small dank closet. Not much in here except: ",
+        "connections": {
+            "North": null,
+            "East": null,
+            "South": null,
+            "West": {
+                "roomKey":"TEST_ROOM_2",
+                "entranceDescription":"Back the way you came"
+            }
+        },
+        "npcs": [
+
+        ],
+        "enemies": [
+
+        ],
+        "items": [
+            {
+                "itemKey": "DIRTY_BROOM",
+                "itemDescription": "A straw broom with a dirty handle."
+            },
+            {
+                "itemKey": "BROKEN_BUCKET",
+                "itemDescription": "A wooden bucket with a small hole in the bottom."
+            }
+        ],
+        "players": [
+
+        ]
+    }
+]

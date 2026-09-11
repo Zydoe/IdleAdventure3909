@@ -1,0 +1,76 @@
+<!--    @Developer: Ben Judson
+        @Date: 2025-10-03
+        @Document: game.html the game page for Idle Adventure
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Idle adventure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scales to fit screen size-->
+		<link rel="stylesheet" href="/styles/index.css"/>
+        <link rel="stylesheet" href="/styles/game.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/scripts/gamePage.js"></script>
+	</head>
+    <body>
+        <img class = "pageBackground" src="/images/old-wrinkled-paper.jpg">
+        <div class="gamePage">
+            <div class="screenSection left" id="leftScreenSection">
+                <div class="gameNavigationBar">
+                    <a href="/home"><img class="logo" id="gameLogo" src="./images/gameLogo.png"></img></a>
+                    <h2 class="title" id="gameTitle">Idle Adventure</h2>
+                    <img class="icon" id="hamburgerMenuBTN" src="./images/HamburgerMenuIcon.png">
+                        
+                    </img>
+                </div>
+                <ul class="hamburgerList" id="hamburgerList">
+                            <A href="/home"><li>Home</li></A>
+                            <li id="downloadSaveBTN">Download Save</li>
+                            <li id="howToPlayBTN">How To Play</li>
+                            <li id="accountBTN">Account</li>
+                        </ul>
+                <div class="gameTabs">
+                    <div class="tabButtons">
+                        <button class="gameButton active" id="characterBTN" data-tab="Character">Character</button>
+                        <button class="gameButton" id="itemBTN" data-tab="Items">Items</button>
+                        <button class="gameButton" id="abilityBTN" data-tab="Abilities">Abilities</button>
+                        <button class="gameButton" id="questsBTN" data-tab="Quests">Quests</button>
+                    </div>
+                    <div class="tabContent" id="tabContent">
+                        <div class="contentArea active" id="characterTab">
+                            <h2 class="tabHeader">Character</h2>
+                            <p class="characterInfo"><strong>Level:&#9</strong><span id="levelSpan">X</span></p>
+                            <p class="characterInfo"><strong>Health:&#9</strong><span id="healthSpan">?/?</span></p>
+                            <p class="characterInfo"><strong>Stamina:&#9</strong><span id="staminaSpan">?/?</span></p>
+                            <hr>
+                            <p class="characterInfo"><strong>Strength:&#9</strong><span id="strengthSpan">X</span></p>
+                            <p class="characterInfo"><strong>Dexterity:&#9</strong><span id="dexteritySpan">X</span></p>
+                            <p class="characterInfo"><strong>Faith:&#9</strong><span id="faithSpan">X</span></p>
+                            <p class="characterInfo"><strong>Luck:&#9</strong><span id="luckSpan">X</span></p>
+                        </div>
+                        <div class="contentArea" id="itemsTab">
+                            <h2 class="tabHeader">Items</h2>
+                        </div>
+                        <div class="contentArea" id="abilitiesTab">
+                            <h2 class="tabHeader">Abilities</h2>
+                        </div>
+                        <div class="contentArea" id="questsTab">
+                            <h2 class="tabHeader">Quests</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screenSection center">
+                <div class="textSpace" id="textSpace">
+                    
+                    <input type="text" id="gameInput" placeholder="Type here...">
+                </div>
+                
+            </div>
+            <div class="screenSection right">
+                Right Side
+            </div>
+        </div>
+    </body>
+</html>

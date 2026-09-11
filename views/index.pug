@@ -1,0 +1,45 @@
+include layouts/head.pug
+include mixins/navigationBar.pug
+//-Author: Ben Judson
+//-Final project
+//-Date 11-22-2025
+body
+  img.pageBackground(src="/images/old-wrinkled-paper.jpg")
+  +navigationBar()
+  .mainArea.index(alt="Ai generated fantasy photo of a boy and a chicken")
+    h1#welcomeTitle Welcome to Idle Adventure!
+    button.importantButton#playNowButton Play Now
+    p This is a text based adventure game, where you can explore, get stronger, and choose how you make your way through the world!
+
+  p Created by: Ben Judson for his Internet Programming Project
+
+  #loginForm.form.toggleForm
+    form(method="post", action="http://localhost:3000/formSubmit/login")
+      img.closeFormButton(src="images/Red_X.png")
+      h1.formTitle Login
+      .formBody
+        each input in loginInputs
+          .formInput
+            label.formLabel(for=input.id) #{input.label}
+            input.formTextArea(id=input.id, type=input.type, name=input.name)
+        button.formSubmitButton#loginSubmitBTN Login
+        p#signUpLink
+          a Sign Up Now
+        p.formError#loginError
+
+  #signUpForm.form.toggleForm
+    form
+      img.closeFormButton(src="images/Red_X.png")
+      h1.formTitle Create Account
+      .formBody
+        each input in signUpInputs
+          .formInput
+            label.formLabel(for=input.id) #{input.label}
+            input.formTextArea(
+              id=input.id,
+              type=input.type,
+              name=input.name,
+              placeholder=input.placeholder
+            )
+        button.formSubmitButton#signUpSubmitBTN Create Account
+        p.formError#signUpError

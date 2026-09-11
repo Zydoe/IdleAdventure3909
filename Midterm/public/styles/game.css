@@ -1,0 +1,166 @@
+body{
+    padding:0px;
+    margin: 0;
+    overflow: hidden;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+.pageBackground{
+    height: 729px;
+}
+.gamePage{
+    display: flex;
+    justify-content: space-between;
+}
+.screenSection{
+    width: 25%;
+}
+.screenSection.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+.screenSection.center{
+    width:50%;
+}
+.screenSection.right{
+    background-color: grey;
+}
+.gameNavigationBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    gap:10px;
+}
+
+/*Hamburger menu*/
+.icon{
+    width:30px;
+    background-color: #AAAAAA;
+    margin:5px;
+}
+.icon:hover{
+    filter: brightness(110%);
+}
+.hamburgerList{
+    display: none;
+}
+.hamburgerList.active{
+    display: block;
+    margin:0px;
+    background-color: #101010;
+    color: #AAAAAA;
+    font-size: 20px;
+    position: relative;
+    top: -10px;
+    list-style: none;
+    list-style-position: inside;
+    padding: 0px;
+    width: 100%;
+}
+.hamburgerList li{
+    width: 100%;
+}
+.hamburgerList li:hover{
+    color: #FFFFFF;
+    background-color: #505050;
+    cursor: pointer;
+}
+
+/*Game area*/
+.textSpace{
+    width: 100%;
+    height: 729px;
+    background-color: rgba(255, 188, 100, 0.586);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    gap: 10px;
+}
+#gameInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    font-size: 15px;
+    height: 20px;
+    width:  90%;
+    justify-self: center;
+    align-self: center;
+    background-color: #e4912b;
+    color: #101010;
+}
+
+
+/*Game buttons menu*/
+.tabButtons{
+    display: flex;
+    justify-content: center;
+    gap:0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.characterInfo{
+    margin-left: 10px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+.tabContent{
+    width: 100%;
+    height: 585px;
+    background-color: #707070;
+}
+.tabContent .contentArea{
+    display: none;
+    width:90%;
+    height:90%;
+}
+.tabContent .contentArea.active{
+    display: block;
+}
+.tabHeader{
+    margin:0;
+    justify-self: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+.gameButton{
+    margin: 0;
+    width: 94px;
+    height: 30px;
+    border: 1px solid black;
+    background-color:#AAAAAA;
+}
+.gameButton.active{
+    background-color: #707070;
+    border-bottom: 0px;
+    font-weight: bold;
+}
+.gameButton:hover{
+    filter:brightness(110%);
+}
+.gameButton.active:hover{
+    background-color: #707070;
+    filter:brightness(100%);
+}
+
+
+/*Game text classes*/
+.gameText{
+    margin: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.connection{
+    color:#0060AA;
+}
+.titleMessage{
+    font-size: 30px;
+}

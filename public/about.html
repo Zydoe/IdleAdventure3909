@@ -1,0 +1,51 @@
+<!--    @Developer: Ben Judson
+        @Date: 2026-03-23
+        @Document: about page for Idle Adventure
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>About Idle Adventure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scales to fit screen size-->
+		<link rel="stylesheet" href="/styles/index.css"/>
+        <link rel="stylesheet" href="/styles/navigationBar.css"/>
+        <link rel="stylesheet" href="/styles/about.css"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/scripts/navigationBar.js"></script>
+        
+	</head>
+    <body>
+        <img class = "pageBackground" src="/images/old-wrinkled-paper.jpg">
+        <div id="TitleHeader" class="header">
+            <div class="titleFlex logoWrapper">
+                <a class="logoLink" href="/home"><img class="logo" id="gameLogo" src="./images/gameLogo.png"></img> <h1>Idle Adventure</h1></a>
+            </div>
+           <div class="navLink"><a href="/home">Home</a></div>
+           <div class="navLink"><a href="/about">About</a></div>
+           <div class="navLink"><a href="/account">My Account</a></div>
+        </div>
+        <div class="content">
+            <h1 class="pageTitle">About Idle Adventure</h1>
+            <p class = "paragraph">Idle Adventure was initially created as a project for my internet programming course at the <a href="https://www.uwinnipeg.ca/" target="_blank">University of Winnipeg</a> in 2025. The project was to create a localhost server that could communicate with a browser, and store session data both in memory and a data base. Many people elected to submit
+                chat rooms and other social media type applications. I however saw this project as an opportunity to create a fun game, and learn not just about the internet, but about complex data driven game mechanics.
+            </p>
+            <p class = "paragraph">
+                I have always been interested in game development, and bringing a fun and elegant experience to users. To me, game logic is elegance and is far more than just code. The first thing I did was draw out how I wanted the game to work in my notebook. I still have ideas in there that I have yet to implement
+                but many of the initial sketches were huge instruments in bringing the game to life.
+            </p>
+            <p class = "paragraph">
+                Besides the front end application, and server elements that I followed along with in class, the first code I wrote for the game was movement. If this game was going to work the player needed to move. So I drew a map of the area, gave names and locations. Then I divided the map into "rooms".
+                Rooms are the foundation of the game, they are the area a player is in at a given time. A player will hop from room to room via "connections" in order to traverse the world. Each room has items, npcs, or enemy functionality.
+            </p>
+            <p class = "paragraph">
+                Adding multiplayer was actually really easy. Since I used a scalable data structure approach to building the characters and world, allowing multiple players to connect was as easy as making the server run asyncronously. For combat I just randomized the turn order for all the players in the room, and all of the enemies. 
+            </p>
+            <p class = "paragraph">
+                The game now is hosted for people to play, and I am still adding content here and there. The project was a lot of help learning Node.js and MongoDB, and since I built it without knowing about React or any other framework, I have greatly developed my javascript skills by accidentaly
+                building a front end framework from scratch. This project has given me a appreciation and perspective on the value of frameworks. I am really proud of how the game turned out, and I hope you enjoy playing it as much as I enjoyed making it.
+            </p>
+        </div>
+    </body>
+</html>

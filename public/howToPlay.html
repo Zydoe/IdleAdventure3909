@@ -1,0 +1,92 @@
+<!--    @Developer: Ben Judson
+        @Date: 2025-09-25
+        @Document: howToPlay.html: An instructional page for Idle Adventure
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>How to Play</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scales to fit screen size-->
+		<link rel="stylesheet" href="/styles/index.css"/>
+        <link rel="stylesheet" href="/styles/home.css"/>
+        <link rel="stylesheet" href="/styles/navigationBar.css"/>
+        <link rel="stylesheet" href="/styles/how-to-play.css"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/scripts/navigationBar.js"></script>
+        <script src="/scripts/howToPlay.js"></script>
+        
+	</head>
+    <body>
+        <img class = "pageBackground" src="/images/old-wrinkled-paper.jpg">
+        <div id="TitleHeader" class="header">
+            <div class="titleFlex logoWrapper">
+                <a class="logoLink" href="/home"><img class="logo" id="gameLogo" src="./images/gameLogo.png"></img> <h1>Idle Adventure</h1></a>
+            </div>
+           <div class="navLink"><a href="/home">Home</a></div>
+           <div class="navLink"><a href="/about">About</a></div>
+           <div class="navLink"><a href="/account">My Account</a></div>
+        </div>
+        <div class="content">
+            <h1 class="pageTitle">How To Play</h1>
+            <h2>Idle Adventure</h2>
+            <p class="informationText">Idle adventure is a text based adventure game. The player can read and type their way through this fantasy world, exploring and fighting through challenges and adventures</p>
+            
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Text to Actions</h2>
+                    <p class="informationText">The game is primarily controlled through the keyboard. The player can type commands to interact with the world, such as "go north", "attack goblin", or "use health potion". The game will respond to these commands with text describing the results of the player's actions.</p>
+                    <p class="informationText">In this image a player has typed a social command using "say [message]".</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-TextArea.png">
+            </div>
+
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Actions Menu</h2>
+                    <p class="informationText">The actions menu (located on the right side of the screen) provides a user interface for the player to quickly access available commands and actions without typing them out. This can include attacking, using items, or interacting with the environment.</p>
+                    <p class="informationText">Some actions displayed cannot be clicked, and the user will need to type the corresponding command manually. In the image here "Equip [item]" will require the player to type "Equip Sword" to equip a sword.</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-ActionsMenu.png">
+            </div>
+
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Character Menu</h2>
+                    <p class="informationText">The character menu (located on the left side of the screen) is an informational interface that provides details about the player's character, including stats, equipment, and other relevant information.</p>
+                    <p class="informationText">The visual UI will show you items you have equipped, and your current stats.</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-CharacterMenu.png">
+            </div>
+
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Items Menu</h2>
+                    <p class="informationText">The items menu (located on the left side of the screen) is an interactable interface that provides details about the player's items, including their effects, quantities, and other relevant information.</p>
+                    <p class="informationText">Hover over an item to see its information.</p>
+                    <p class="informationText">Right click to open the context menu. Here you can use, equip, or discard items without using the typing method mentioned above.</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-ItemsMenu.png">
+            </div>
+
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Navigation Menu</h2>
+                    <p class="informationText">The navigation menu is hidden behind the hamburger icon in the top left. Select it to view the navigation options.</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-HamburgerMenu.png">
+            </div>
+
+            <div class = "informationSection">
+                <div class="textContent">
+                    <h2 class="informationHeader">Idle Adventure</h2>
+                    <p class="informationText">The game is still a work in progress, but you can explore the current features and provide feedback to help shape its development.</p>
+                    <p class="informationText">Please be respectful with each other in the game world, and remember to have fun!</p>
+                    <p class="informationText">This game was created by Ben Judson in 2025</p>
+                </div>
+                <img class="informationImage" src="/images/Screenshot-Game.png">
+            </div>
+        </div>
+    </body>
+</html>

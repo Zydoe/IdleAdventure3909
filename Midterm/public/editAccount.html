@@ -1,0 +1,63 @@
+<!--    @Developer: Ben Judson
+        @Date: 2025-10-05
+        @Document: index.html: A homepage for idle adventure
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Edit Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- scales to fit screen size-->
+		<link rel="stylesheet" href="/styles/index.css"/>
+        <link rel="stylesheet" href="/styles/account.css"/>
+        <link rel="stylesheet" href="/styles/navigationBar.css"/>
+        <link rel="stylesheet" href="/styles/editAccount.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/scripts/navigationBar.js"></script>
+        <script src="/scripts/editAccount.js"></script>
+
+	</head>
+    <body>
+        <img class = "pageBackground" src="/images/old-wrinkled-paper.jpg">
+        <div id="TitleHeader" class="header">
+            <div class="titleFlex logoWrapper">
+                <a href="/home"><img class="logo" id="gameLogo" src="/images/gameLogo.png"></img></a>
+            </div>
+            <div class="titleFlex">
+                <h1>My Account</h1>
+            </div>
+            <div class="titleFlex" id="navigationMenu">
+                <ul>
+                    <li id="homeMenu">Home</li>
+                    <li id="playMenu">Play</li>
+                    <li id="howToPlayMenu">How to Play</li>
+                </ul>
+            </div>
+        </div>
+        <div class="profilePage">
+            <img src="/images/PFP_placeholder.png" class="profilePicture" id="profilePicture">
+            <label for="editPictureBTN" id="editPictureLabel">Edit Profile Picture</label>
+            <input class="accountButton" id="editPictureBTN" type="file" accept="image/jpg, image/png">
+            <div class="infoArea">
+                <label for="emailInput">Email:</label>
+                <input type = "text" id="emailInput" class="inputArea">
+            </div>
+            <div class="infoArea">
+                <label for="usernameInput">Username:</label>
+                <input type = "text" class="inputArea"id="usernameInput">
+            </div>
+            <div class="infoArea">
+                <label for="passwordInput">Password:</label>
+                <input type = "text" class="inputArea"id="passwordInput">
+            </div>
+            <div class="infoArea">
+                <label for="password2Input">Confirm Password:</label>
+                <input type = "text" class="inputArea"id="password2Input">
+            </div>
+            <button class="accountButton" id="saveBTN">Save</button>
+            <button class="accountButton" id="cancelBTN">Cancel</button>
+            <p id="saveResponse"></p>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,214 @@
+[
+    {
+        "roomKey": "ROOM_TEMPLATE",
+        "roomName": "Template",
+        "roomDescription": "",
+        "connections": {
+            "North": {
+                "roomKey":null,
+                "entranceDescription":null
+            },
+            "East": null,
+            "South": null,
+            "West": null
+        },
+        "npcs": [
+
+        ],
+        "enemies": [
+            {
+                "enemyName": null,
+                "enemyKey": "GOBLIN",
+                "enemyLevel": 1,
+                "extraDescription": null
+            }
+        ],
+        "items": [
+            {
+                "itemKey": "RUSTED_IRON_SWORD",
+                "itemDescription": "On the table is an aged iron sword, flaking away with rust and dirt"
+            }
+        ],
+        "players": [
+
+        ]
+    },
+    {
+        "roomKey": "ELDI_WOODS_1",
+        "roomName": "Overgrown woods",
+        "roomDescription": "Many large trees, with winding, tangled roots stretching out over the ground. The ground itself is muddy, and difficult to traverse.",
+        "connections": {
+            "North":null,
+            "East": {
+                "roomKey":"ALCHEMISTS_COTTAGE_EXTERIOR",
+                "entranceDescription":"The trees open into some kind of clearing to the East"
+            },
+            "South": {
+                "roomKey":"ELDI_WOODS_2",
+                "entranceDescription":"Trees and forest"
+            },
+            "West": {
+                "roomKey":"ELDI_RIVER_1",
+                "entranceDescription":"The sound of rushing water comes from the West"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_2",
+        "roomName": "Overgrown woods",
+        "roomDescription": "Your surroundings are entirely trees, and roots. The sound of rushing water can be heard nearby. The ground is muddy and sticks to you.",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_1",
+                "entranceDescription":"The forest gets more dense to the North"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_5",
+                "entranceDescription":"The trees fall into a more ordered, less random pattern to the East"
+            },
+            "South": {
+                "roomKey":"ELDI_WOODS_3",
+                "entranceDescription":"The trees get less dense to the South"
+            },
+            "West": {
+                "roomKey":"ELDI_RIVER_2",
+                "entranceDescription":"The sound of rushing water comes from the West"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_3",
+        "roomName": "Maintained woods",
+        "roomDescription": "You are surrounded by trees, nearby is a long since extingushed campfire. The ground is muddy, many footprints are stamped into the mud. They appear at least a day old.",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_2",
+                "entranceDescription":"The forest gets more dense to the North"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_6",
+                "entranceDescription":"The trees fall into a more ordered, less random pattern to the East"
+            },
+            "South": {
+                "roomKey":"ELDI_WOODS_4",
+                "entranceDescription":"The trees get less dense and more orderly to the South"
+            },
+            "West": {
+                "roomKey":"ELDI_RIVER_3",
+                "entranceDescription":"The sound of rushing water comes from the West"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_4",
+        "roomName": "The Kings Road",
+        "roomDescription": "A large cobblestone road running from East to West. Along the North and South side are trees, lining the road in an evenly spaced, ordered fashion",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_3",
+                "entranceDescription":"A forest of ordered trees, and a beaten path into them"
+            },
+            "East": {
+                "roomKey":"ELDI_CROSSROADS",
+                "entranceDescription":"The road continues Eastwards, you can see a distant street sign"
+            },
+            "South": {
+                "roomKey":"ELDI_BEACH_1",
+                "entranceDescription":"A few trees obscure the view South, but the smell of salt and rot is strong"
+            },
+            "West": {
+                "roomKey":"ELDI_BRIDGE",
+                "entranceDescription":"The road continues West, and the sound of rushing water can be heard"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_5",
+        "roomName": "Forgotten Road",
+        "roomDescription": "An overgrown and damaged dirt road leading from North to South. Roots and rocks penetrate the road causing it to be uneven, and unfit for transportation",
+        "connections": {
+            "North":{
+                "roomKey":"ALCHEMISTS_COTTAGE_EXTERIOR",
+                "entranceDescription":"The road continues North, distantly through the trees, you can see a large house"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_9",
+                "entranceDescription":"Off the road and into the trees, the smell of smoke. Perhaps a fire?"
+            },
+            "South": {
+                "roomKey":"ELDI_WOODS_6",
+                "entranceDescription":"The road continues Southward, cutting through the forest"
+            },
+            "West": {
+                "roomKey":"ELDI_RIVER_2",
+                "entranceDescription":"The forest continues"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_6",
+        "roomName": "Forgotten Road",
+        "roomDescription": "An overgrown and damaged dirt road leading from North to South. Roots and rocks penetrate the road causing it to be uneven, and unfit for transportation",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_5",
+                "entranceDescription":"The road continues North, cutting through the forest"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_7",
+                "entranceDescription":"The forest deepens"
+            },
+            "South": {
+                "roomKey":"ELDI_CROSSROADS",
+                "entranceDescription":"The road continues Southward, you see a distant street sign"
+            },
+            "West": {
+                "roomKey":"ELDI_WOODS_3",
+                "entranceDescription":"The forest continues"
+            }
+        }
+    },
+    {
+        "roomKey": "ELDI_WOODS_7",
+        "roomName": "Dark Forest",
+        "roomDescription": "Surrounded by trees, the overhang snuffs out any sun or moonlight. The dense trees are difficult to move through, and the uneven unlit ground is a death trap waiting to be set off",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_9",
+                "entranceDescription":"You can see a faint orange light through the trees to the North. The smell of smoke wafting southwards"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_6",
+                "entranceDescription":"The forest gets less dense to the East"
+            },
+            "South": {
+                "roomKey":"ELDI_CROSSROADS",
+                "entranceDescription":"The road continues Southward, you see a distant street sign"
+            },
+            "West": null
+        }
+    },
+{
+        "roomKey": "ELDI_WOODS_8",
+        "roomName": "The Kings Road",
+        "roomDescription": "An overgrown and damaged dirt road leading from North to South. Roots and rocks penetrate the road causing it to be uneven, and unfit for transportation",
+        "connections": {
+            "North":{
+                "roomKey":"ELDI_WOODS_5",
+                "entranceDescription":"The road continues North, cutting through the forest"
+            },
+            "East": {
+                "roomKey":"ELDI_WOODS_7",
+                "entranceDescription":"The forest deepens"
+            },
+            "South": {
+                "roomKey":"ELDI_CROSSROADS",
+                "entranceDescription":"The road continues Southward, you see a distant street sign"
+            },
+            "West": {
+                "roomKey":"ELDI_WOODS_3",
+                "entranceDescription":"The forest continues"
+            }
+        }
+    }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "idleadventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0",
+    "multer": "^2.0.2",
+    "node": "^25.8.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pbkdf2-password": "^1.2.1",
+    "pug": "^3.0.3"
+  }
+}

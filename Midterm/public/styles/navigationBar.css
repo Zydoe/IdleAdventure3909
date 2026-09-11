@@ -1,0 +1,29 @@
+.titleFlex{
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.titleFlex.logoWrapper{
+    display: flex;
+    justify-content: flex-start;
+}
+.header{
+    display: flex;
+    
+}
+#navigationMenu{
+    display: flex;
+    justify-content: right;
+}
+#navigationMenu li{
+    background-color: grey;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+#navigationMenu li:hover{
+    background-color: #AAAAAA;
+    text-decoration: underline;
+}

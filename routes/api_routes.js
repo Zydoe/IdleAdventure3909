@@ -38,7 +38,15 @@ module.exports = function(userAccounts, Game){
     const router = express.Router();
     const PFP_NAME = /^\d+-\d+\.(png|jpg|jpeg)$/i;
 
-    router.patch("/api/account/edit",uploadPfp.single("pfp"),
+    // new protection for pfp errors
+    router.use((err, req, res, next) => {
+        if (err instanceof multer.MulterError) {
+            return res.status(400).send(`Upload error: ${err.code} (field: ${err.field})`);
+        }
+        next(err);
+    });
+
+    router.patch("/api/account/edit",uploadPfp.single("profilePicture"),
     async (req, res, next) => {
         if(!isAuthenticated(req)){
             send401(req,res);

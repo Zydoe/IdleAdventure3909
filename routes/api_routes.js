@@ -4,9 +4,13 @@ const serverBase = path.join(__dirname,".."); //points to server directory
 const ValidateUserInfo = require(serverBase+'/private/scripts/ValidateUserInfo');
 const models = require(serverBase+'/private/scripts/dataModels');
 const multer = require('multer');
+const fs = require('fs');
+const directorys = {
+    profilePicturesPath:path.join(serverBase,'private','uploads','profilePictures')
+}
 const profilePictureStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(serverBase, "private/uploads/profilepictures"));
+        cb(null, path.join(serverBase, directorys.profilePicturesPath));
     },
     filename: (req, file, cb) => {
         const ext = path.extname(file.originalname); // .png, .jpg
@@ -15,7 +19,7 @@ const profilePictureStorage = multer.diskStorage({
     }
 })
 const uploadPfp = multer({storage:profilePictureStorage}); //converts multipart files from text to files for profile pictures
-const upload = multer({dest:path.join(serverBase, "private/uploads/")}); //converts multipart files from text to files
+const upload = multer({dest:path.join(serverBase, directorys.profilePicturesPath)}); //converts multipart files from text to files
 
 
 function isAuthenticated(req){
@@ -32,6 +36,7 @@ function send401(req,res){
 
 module.exports = function(userAccounts, Game){
     const router = express.Router();
+    const PFP_NAME = /^\d+-\d+\.(png|jpg|jpeg)$/i;
 
     router.patch("/api/account/edit",uploadPfp.single("pfp"),
     async (req, res, next) => {
@@ -107,6 +112,7 @@ module.exports = function(userAccounts, Game){
         }
         else{
             send401(req,res); //unauthorized
+            return;
         }
         res.status(204).end();//updated succesfully
         return;
@@ -152,9 +158,23 @@ module.exports = function(userAccounts, Game){
         }
     })
 
-    router.route("/users/pictures/:profilePicture").get((req,res)=>{
-        res.sendFile(path.join(directorys.profilePicturesPath, req.params.profilePicture));
-    })
+
+    router.route("/users/pictures/:profilePicture").get((req, res) => {
+        const name = req.params.profilePicture;
+
+        if (!PFP_NAME.test(name)) {
+            return res.sendStatus(400);
+        }
+
+        res.sendFile(name, {
+            root: directorys.profilePicturesPath,
+            dotfiles: "deny"
+        }, (err) => {
+            if (err && !res.headersSent) {
+                res.sendStatus(err.status === 404 ? 404 : 500);
+            }
+        });
+    });
 
     
     return router;

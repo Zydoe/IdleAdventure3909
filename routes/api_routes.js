@@ -185,9 +185,11 @@ module.exports = function(userAccounts, Game){
     });
 
     router.route("/api/getName").get(async (req,res)=>{
+        res.set('Access-Control-Allow-Origin', '*');
         res.json({name: "Idle Adventure"});
     });
     router.route("/api/getImage").get(async (req,res)=>{
+        res.set('Access-Control-Allow-Origin', '*');
         res.sendFile(__dirname + "../public/adventurer.jpeg");
     });
     return router;

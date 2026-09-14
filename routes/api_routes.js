@@ -5,6 +5,7 @@ const ValidateUserInfo = require(serverBase+'/private/scripts/ValidateUserInfo')
 const models = require(serverBase+'/private/scripts/dataModels');
 const multer = require('multer');
 const fs = require('fs');
+const publicFolder = path.join(serverBase, 'public');
 const directorys = {
     profilePicturesPath:path.join(serverBase,'private','uploads','profilePictures')
 }
@@ -190,7 +191,7 @@ module.exports = function(userAccounts, Game){
     });
     router.route("/api/getImage").get(async (req,res)=>{
         res.set('Access-Control-Allow-Origin', '*');
-        res.sendFile(__dirname + "../public/adventurer.jpeg");
+        res.sendFile(publicFolder + "/adventurer.jpeg");
     });
     return router;
 }
